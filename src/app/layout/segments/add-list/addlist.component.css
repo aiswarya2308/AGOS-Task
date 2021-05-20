@@ -1,0 +1,20 @@
+.normal-form{
+    width: 380px;
+}
+button{
+    margin: 10px;
+}
+.emoji-mart-emoji {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+}
+::ng-deep .emoji-mart-emoji{
+    width: 200px!important;
+    height: 500px!important;
+}
+.btn-dialog-close{
+    float: right;
+    width: 30px;
+    padding: 5px;
+}

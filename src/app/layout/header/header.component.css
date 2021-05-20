@@ -1,0 +1,9 @@
+.example-spacer{
+    flex: 1 1 auto;
+}
+mat-icon a{
+    text-decoration: none;
+}
+mat-icon{
+    padding: 10px;
+}

@@ -1,0 +1,20 @@
+<h2>Prospector</h2>
+<div class="search-div">
+  <mat-form-field class="search-form-field" floatLabel="never" appearance="outline">
+      <input matInput placeholder="Search for a table or a segment" autocomplete="off">
+  </mat-form-field>
+</div>
+<mat-list role="list" class="sidebar">
+    <h4>SEGMENTS</h4>
+      <ng-template >
+        <mat-list-item role="list" *ngFor="let i of list">
+          <div>
+            <p>{{i.icon}}</p>
+            <a>{{i.name}}</a>
+          </div>
+        </mat-list-item>
+      </ng-template>
+        
+  </mat-list>
+
+  <button mat-raised-button color="primary" (click)="openModel()">+ Add a segment</button>

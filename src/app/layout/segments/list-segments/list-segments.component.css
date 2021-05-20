@@ -1,0 +1,26 @@
+.list-segment{
+    margin: 50px;
+}
+h2{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+.list-segment button{
+    padding: 5px 20px;
+    font-size: 50px;
+    border-radius: 10px;
+    background: #fff;
+}
+p{
+    background: blue;
+    color: #fff;
+    width: 90px;
+    font-size: 12px;
+    padding: 2px 10px;
+}
+.segment2{
+    border: 2px solid blue;
+    color: blue;
+}

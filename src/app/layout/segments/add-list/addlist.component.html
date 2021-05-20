@@ -1,0 +1,54 @@
+<button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1">
+    <mat-icon>clear</mat-icon>
+</button>
+<h4>Add a segment</h4>
+
+<form #service="ngForm" class="normal-form" (ngSubmit)='onSubmit()'>
+    <mat-grid-list cols="1" rowHeight="400px">
+        <mat-grid-tile>
+            <div class="controles-container">
+               
+                <mat-form-field appearance="outline">
+                    <mat-label>Name*</mat-label>
+                    <input formControlName="Name" matInput>
+                </mat-form-field>
+                
+                <mat-form-field appearance="outline">
+                    <mat-label>Color</mat-label>
+                    <mat-select name="segment" [(ngModel)]="colors">
+                        <mat-select-trigger>
+                            <span [ngStyle]="{ 'background-color': colors }"> </span>
+                        </mat-select-trigger>
+                        <mat-option *ngFor="let seg of colors" [ngStyle]="{ 'background-color': seg.color }">
+                            
+                           
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field> 
+            
+                <mat-form-field appearance="outline">
+                    <mat-label><ngx-emoji [emoji]="selectedEmoji"> <span class="emoji-mart-emoji"></span></ngx-emoji></mat-label>
+                    <mat-select>
+
+                        <mat-option >
+                            
+
+                            <emoji-mart (emojiSelect)="select($event)"></emoji-mart>
+                           
+                        </mat-option>
+                        
+                    </mat-select>
+                </mat-form-field>
+                
+            </div>
+        </mat-grid-tile>
+       
+    </mat-grid-list>
+    <mat-toolbar>
+        <span class="fill-remaining-space"></span>
+        <div class="button-row">
+            <button mat-raised-button color="primary" type="submit">Add</button>
+            <button mat-raised-button (click)="onCancel()">Cancel</button>
+        </div>
+    </mat-toolbar>
+</form>
